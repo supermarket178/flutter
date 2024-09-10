@@ -11,7 +11,6 @@ class CustomSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('Search Store');
         GoRouter.of(context).go(AppRouter.kSearchView);
       },
       child: Container(

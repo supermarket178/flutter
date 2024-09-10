@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:supermarket/constants.dart';
-import 'package:supermarket/core/utils/app_router.dart';
 import 'package:supermarket/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.title,
+    required this.title, required this.onPressed,
   });
   final String title;
+  final Function onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: 67,
       child: ElevatedButton(
-        onPressed: () {
-          GoRouter.of(context).go(AppRouter.kHomeView);
-        },
+        onPressed: () => onPressed(),
         style: ElevatedButton.styleFrom(
           backgroundColor: kPrimaryColor,
           shape: RoundedRectangleBorder(

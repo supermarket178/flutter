@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:supermarket/core/utils/styles.dart';
 import 'package:supermarket/features/product_details/presentation/widget/custom_divider.dart';
 
@@ -21,12 +22,8 @@ class ProductReview extends StatelessWidget {
                   style: AppStyles.styleSemiBold16(context),
                 ),
                 Transform.rotate(
-                  angle: 90 * 3.1415926535897932 / 180,
-                  child: const Icon(
-                    Icons.arrow_forward_ios,
-                    size: 20,
-                  ),
-                )
+                    angle: 6 / 4,
+                    child: SvgPicture.asset('assets/image/back arrow.svg')),
               ],
             ),
           ),
@@ -53,13 +50,7 @@ class ProductReview extends StatelessWidget {
               padding: const EdgeInsets.all(6),
               child: const Text('100g'),
             ),
-            Transform.rotate(
-              angle: 180 * 3.1415926535897932,
-              child: const Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-              ),
-            ),
+            SvgPicture.asset('assets/image/back arrow.svg'),
           ],
         ),
         const CustomDivider(),
@@ -80,13 +71,7 @@ class ProductReview extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 20),
-            Transform.rotate(
-              angle: 180 * 3.1415926535897932,
-              child: const Icon(
-                Icons.arrow_forward_ios,
-                size: 20,
-              ),
-            ),
+            SvgPicture.asset('assets/image/back arrow.svg'),
           ],
         ),
       ],

@@ -14,20 +14,21 @@ class CustomBottomBar extends StatefulWidget {
 }
 
 class _CustomBottomBarState extends State<CustomBottomBar> {
-  late int _currentIndex; // Declare a local mutable variable
+  late int _currentIndex; 
 
-  // Define your route names or paths in this list
   final List<String> routes = [
-    AppRouter.kHomeView, // Assuming you have defined kHomeView in AppRouter
-    AppRouter.kExploreView, // Add these named routes in AppRouter
-    // Add routes for cart, favorite, and profile
+    AppRouter.kHomeView, 
+    AppRouter.kExploreView, 
+    AppRouter.kMyCartView,
+    AppRouter.kFavoriteView,
+    AppRouter.kProfileView,
   ];
 
   @override
   void initState() {
     super.initState();
     _currentIndex = widget
-        .navbarcurrentIndex; // Initialize with the value passed from the widget
+        .navbarcurrentIndex; 
   }
 
   @override
@@ -51,12 +52,12 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       child: Padding(
         padding: const EdgeInsets.only(top: 10, bottom: 10),
         child: BottomNavigationBar(
-          currentIndex: _currentIndex, // Use the local variable
+          currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
-              _currentIndex = index; // Update the local variable
+              _currentIndex = index;
               GoRouter.of(context)
-                  .go(routes[index]); // Navigate to the selected route
+                  .go(routes[index]); 
             });
           },
           unselectedItemColor: Colors.black,

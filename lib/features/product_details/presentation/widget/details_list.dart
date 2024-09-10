@@ -35,7 +35,8 @@ class DetailsList extends StatelessWidget {
           const CustomDivider(),
           const ProductReview(),
           const SizedBox(height: 20), // Consistent spacing
-          const CustomButton(title: 'Add To Basket'),
+          CustomButton(title: 'Add To Basket', onPressed: (){
+          }),
           const SizedBox(height: 30), // Extra space at the bottom
         ],
       ),

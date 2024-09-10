@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supermarket/core/utils/app_router.dart';
@@ -11,6 +12,8 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
+  Timer? _timer;
+
   @override
   void initState() {
     super.initState();
@@ -18,9 +21,17 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(const Duration(seconds: 3), () {
-      GoRouter.of(context).go(AppRouter.konboarding); // Use go or pushReplacement
+    _timer = Timer(const Duration(seconds: 3), () {
+      if (mounted) {
+        GoRouter.of(context).go(AppRouter.konboarding); // Use go or pushReplacement
+      }
     });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
   }
 
   @override

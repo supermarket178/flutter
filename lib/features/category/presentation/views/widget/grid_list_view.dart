@@ -15,18 +15,19 @@ class GridListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: GridView.builder(
-          shrinkWrap: true,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 14,
-            mainAxisSpacing: 15,
-            childAspectRatio: 175 / 260,
-          ),
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: items.length,
-          itemBuilder: (context, index) => ListviewItem(
-                item: items[index],
-              )),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 14,
+          mainAxisSpacing: 15,
+          childAspectRatio: 175 / 260,
+        ),
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.vertical,
+        itemCount: items.length,
+        itemBuilder: (context, index) => ListviewItem(
+          item: items[index],
+        ),
+      ),
     );
   }
 }

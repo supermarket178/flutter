@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:supermarket/core/utils/app_router.dart';
 import 'package:supermarket/features/onboarding/presentation/widget/custom_button.dart';
 
 class OnboadingBody extends StatelessWidget {
@@ -45,8 +47,11 @@ class OnboadingBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-              const CustomButton(
+             CustomButton(
                 title: 'Get Started',
+                onPressed: () {
+                  GoRouter.of(context).go(AppRouter.kHomeView);
+                },
               ),
               const SizedBox(height: 90),
             ],
