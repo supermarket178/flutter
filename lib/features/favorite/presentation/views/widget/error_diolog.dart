@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supermarket/core/utils/styles.dart';
 import 'package:supermarket/features/onboarding/presentation/widget/custom_button.dart';
-import 'package:supermarket/mycart/presentation/views/widget/back_to_home.dart';
+import 'package:supermarket/features/mycart/presentation/views/widget/back_to_home.dart';
 
 class ErrorDiolog extends StatelessWidget {
   const ErrorDiolog({super.key});

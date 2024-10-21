@@ -10,7 +10,7 @@ class OrderViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.only(left: 25, right: 25, top: 70),
       child: Column(
         children: [
           Row(
@@ -28,11 +28,12 @@ class OrderViewBody extends StatelessWidget {
           const SizedBox(height: 20),
           Expanded(
             child: ListView.builder(
+                padding: EdgeInsets.zero,
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return const Column(
+                  return Column(
                     children: [
                       OrdersListItem(),
                     ],

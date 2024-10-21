@@ -28,13 +28,23 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animate_do: ^3.3.4
   cupertino_icons: ^1.0.6
+  dartz: ^0.10.1
+  device_preview: ^1.2.0
+  dio: ^5.7.0
+  dropdown_textfield: ^1.2.0
+  email_validator: ^3.0.0
   expandable_page_view: ^1.0.17
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.6
   flutter_svg: ^2.0.10+1
+  get_it: ^8.0.0
   go_router: ^14.2.7
   google_fonts: ^6.2.1
+  intl_phone_number_input: ^0.7.4
+  phone_form_field: ^9.2.7
   smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
@@ -63,21 +73,6 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/Inter/Inter-VariableFont_opsz,wght.ttf
-        - asset: assets/Inter/static/Inter_18pt-Bold.ttf
-          weight: 700
-        - asset: assets/Inter/static/Inter_18pt-Medium.ttf
-          weight: 500
-        - asset: assets/Inter/static/Inter_18pt-Regular.ttf
-          weight: 400
-        - asset: assets/Inter/static/Inter_18pt-SemiBold.ttf
-          weight: 600
-    - family: HK_GROTESK
-      fonts:
-        - asset: assets/Hanken_Grotesk/HankenGrotesk-VariableFont_wght.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

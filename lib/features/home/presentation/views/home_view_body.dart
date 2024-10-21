@@ -14,20 +14,20 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 94),
           const CustomAppBar(),
           const SizedBox(height: 20),
           ExpandablePageView(
             controller: pageController, // Use the provided pageController
             scrollDirection: Axis.horizontal,
             children: List.generate(
-
                 3,
                 (index) => PageViewItem(
-                  pageController: pageController,
-                )),
+                      pageController: pageController,
+                    )),
           ),
           const SizedBox(height: 30),
           const ExclusiveOffer(
@@ -49,6 +49,7 @@ class HomeViewBody extends StatelessWidget {
             padding: EdgeInsets.only(left: 25),
             child: ProductsListView(),
           ),
+          const SizedBox(height: 30),
         ],
       ),
     );

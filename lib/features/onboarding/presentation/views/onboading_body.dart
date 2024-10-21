@@ -47,10 +47,10 @@ class OnboadingBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-             CustomButton(
+              CustomButton(
                 title: 'Get Started',
                 onPressed: () {
-                  GoRouter.of(context).go(AppRouter.kHomeView);
+                  GoRouter.of(context).go(AppRouter.kSigninView);
                 },
               ),
               const SizedBox(height: 90),

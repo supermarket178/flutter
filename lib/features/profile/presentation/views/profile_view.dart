@@ -7,9 +7,8 @@ class ProfileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-        child: Scaffold(
-            bottomNavigationBar: CustomBottomBar(navbarcurrentIndex: 4),
-            body: ProfileViewBody()));
+    return const Scaffold(
+        bottomNavigationBar: CustomBottomBar(navbarcurrentIndex: 4),
+        body: ProfileViewBody());
   }
 }

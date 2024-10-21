@@ -16,6 +16,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     pageController = PageController();
+  
     pageController.addListener(() {
       setState(() {
         currentPageIndex = pageController.page!.round();
@@ -26,13 +27,13 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar:  const CustomBottomBar(navbarcurrentIndex: 0,),
-        backgroundColor: Colors.white,
-        body: HomeViewBody(
-          pageController: pageController,
-        ),
+    return Scaffold(
+      bottomNavigationBar: const CustomBottomBar(
+        navbarcurrentIndex: 0,
+      ),
+      backgroundColor: Colors.white,
+      body: HomeViewBody(
+        pageController: pageController,
       ),
     );
   }

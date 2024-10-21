@@ -62,36 +62,34 @@ class CategoryView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Column(
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                        onTap: () {
-                          GoRouter.of(context).pop();
-                        },
-                        child: SvgPicture.asset('assets/image/arrow.svg')),
-                    const Spacer(),
-                    Text(
-                      'Category',
-                      style: AppStyles.styleBold20(context),
-                    ),
-                    const Spacer(),
-                    const CustomFilter(),
-                  ],
+    return Scaffold(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 70, left: 25, right: 25),
+            child: Row(
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).pop();
+                    },
+                    child: SvgPicture.asset('assets/image/arrow.svg')),
+                const Spacer(),
+                Text(
+                  'Category',
+                  style: AppStyles.styleBold20(context),
                 ),
-              ),
-              Expanded(child: GridListView(items: items)),
-            ],
+                const Spacer(),
+                const CustomFilter(),
+              ],
+            ),
           ),
-        ),
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+            child: GridListView(items: items),
+          )),
+        ],
       ),
     );
   }

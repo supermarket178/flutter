@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:supermarket/core/utils/app_router.dart';
 import 'package:supermarket/core/utils/styles.dart';
-import 'package:supermarket/features/home/data/models/product_model.dart';
+import 'package:supermarket/features/home/data/models/product_model/product_model.dart';
 import 'package:supermarket/features/home/presentation/views/widget/custom_add_button.dart';
 
 class ListviewItem extends StatelessWidget {
@@ -17,7 +17,7 @@ class ListviewItem extends StatelessWidget {
       },
       child: Container(
         width: 170,
-        height: 250,
+        height: 260,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(18),
@@ -33,21 +33,22 @@ class ListviewItem extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               Center(
-                child: Image.asset(
-                  item.image,
+                child: Image.network(
+                  (item.images![0]) ??
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKnGZQfGZl7AaWeLFEUphgLqbbGYGOvwyvA&s',
                   height: 100, // Fixed height for the image
                 ),
               ),
               const SizedBox(height: 20),
               Text(
-                item.name,
+                item.title ?? '',
                 style: AppStyles.styleBold16(context),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 5),
               Text(
-                item.description,
+                item.description ?? '',
                 style: AppStyles.styleMedium14(context),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,

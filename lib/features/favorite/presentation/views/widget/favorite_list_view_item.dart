@@ -36,12 +36,14 @@ class FavoriteListViewItem extends StatelessWidget {
                   '\$4.99',
                   style: AppStyles.styleSemiBold16(context),
                 ),
-                const SizedBox(width: 5),
+                const SizedBox(width: 7),
                 Transform.rotate(
-                  angle: 12.5 / 4,
+                  angle: 13 / 4,
                   child: GestureDetector(
                     onTap: () {},
-                    child: SvgPicture.asset('assets/image/back arrow.svg'),
+                    child: Transform.rotate(
+                        angle: 12 / 4,
+                        child: SvgPicture.asset('assets/image/back arrow.svg')),
                   ),
                 ),
               ],

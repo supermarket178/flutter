@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -21,37 +22,39 @@ class CustomFilter extends StatelessWidget {
                 topRight: Radius.circular(25),
               ),
             ),
-            builder: (context) => Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 40,
-                ),
-                Expanded(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      IconButton(
-                          padding: const EdgeInsets.only(left: 25, top: 25),
-                          onPressed: () {
-                            GoRouter.of(context).pop();
-                          },
-                          icon: const Icon(
-                            Icons.close,
-                            color: Colors.black,
-                          )),
-                      const Expanded(flex: 7, child: SizedBox()),
-                      Text(
-                        'Filters',
-                        style: AppStyles.styleBold20(context),
-                      ),
-                      const Expanded(flex: 10, child: SizedBox()),
-                    ],
+            builder: (context) => FadeInUp(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 40,
                   ),
-                ),
-                const Filterbody(),
-              ],
+                  Expanded(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        IconButton(
+                            padding: const EdgeInsets.only(left: 25),
+                            onPressed: () {
+                              GoRouter.of(context).pop();
+                            },
+                            icon: const Icon(
+                              Icons.close,
+                              color: Colors.black,
+                            )),
+                        const Expanded(flex: 7, child: SizedBox()),
+                        Text(
+                          'Filters',
+                          style: AppStyles.styleBold20(context),
+                        ),
+                        const Expanded(flex: 10, child: SizedBox()),
+                      ],
+                    ),
+                  ),
+                  const Filterbody(),
+                ],
+              ),
             ),
             isScrollControlled: true,
             context: context,

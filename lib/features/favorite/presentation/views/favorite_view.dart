@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:supermarket/core/utils/styles.dart';
 import 'package:supermarket/features/favorite/presentation/views/widget/Favorite_view_body.dart';
@@ -9,9 +8,11 @@ class FavoriteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       appBar: AppBar(
+        scrolledUnderElevation: 0,
+        shadowColor: Colors.transparent,
+        backgroundColor: Colors.white,
         title: Text(
           'Favorite',
           style: AppStyles.styleBold20(context),
@@ -20,6 +21,6 @@ class FavoriteView extends StatelessWidget {
       ),
       bottomNavigationBar: const CustomBottomBar(navbarcurrentIndex: 3),
       body: const FavoriteViewBody(),
-    ));
+    );
   }
 }

@@ -65,38 +65,37 @@ class _ExplorePageViewState extends State<ExplorePageView> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        bottomNavigationBar: const CustomBottomBar(
-          navbarcurrentIndex: 1,
-        ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                Text('Find Products', style: AppStyles.styleBold20(context)),
-                const SizedBox(height: 20),
-                const CustomSearch(),
-                const SizedBox(height: 20),
-                GridView.builder(
-                  shrinkWrap: true,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                    childAspectRatio: 0.8,
-                  ),
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: exploreModel.length,
-                  itemBuilder: (context, index) =>
-                      ExploreListItem(item: exploreModel[index]),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      bottomNavigationBar: const CustomBottomBar(
+        navbarcurrentIndex: 1,
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            children: [
+              const SizedBox(height: 70),
+              Text('Find Products', style: AppStyles.styleBold20(context)),
+              const SizedBox(height: 20),
+              const CustomSearch(),
+              const SizedBox(height: 20),
+              GridView.builder(
+                padding: EdgeInsets.zero,
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 0.8,
                 ),
-              ],
-            ),
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: exploreModel.length,
+                itemBuilder: (context, index) =>
+                    ExploreListItem(item: exploreModel[index]),
+              ),
+            ],
           ),
         ),
       ),

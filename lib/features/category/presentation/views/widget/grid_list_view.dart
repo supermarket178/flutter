@@ -15,6 +15,7 @@ class GridListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: GridView.builder(
+        padding: EdgeInsets.zero,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 14,
@@ -24,10 +25,6 @@ class GridListView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         itemCount: items.length,
-        itemBuilder: (context, index) => ListviewItem(
-          item: items[index],
-        ),
-      ),
-    );
+        itemBuilder: (context, index) => Container(color: Colors.amber,)));
   }
 }

@@ -61,30 +61,25 @@ class SearchView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: const CustomBottomBar(
-          navbarcurrentIndex: 1,
-        ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                const Row(children: [
-                  SizedBox(width: 15),
-                  Expanded(flex: 8, child: CustomSearchTextfield()),
-                  SizedBox(width: 20),
-                  CustomFilter(),
-                  SizedBox(width: 15),
-                ]),
-                const SizedBox(height: 30),
-                GridListView(items: items),
-              ],
-            ),
-          ),
+    return Scaffold(
+      bottomNavigationBar: const CustomBottomBar(
+        navbarcurrentIndex: 1,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Column(
+          children: [
+            const SizedBox(height: 50),
+            const Row(children: [
+              SizedBox(width: 15),
+              Expanded(flex: 8, child: CustomSearchTextfield()),
+              SizedBox(width: 20),
+              CustomFilter(),
+              SizedBox(width: 15),
+            ]),
+            const SizedBox(height: 20),
+            Expanded(child: GridListView(items: items)),
+          ],
         ),
       ),
     );

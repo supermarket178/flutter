@@ -6,35 +6,30 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 28,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
    static TextStyle styleSemiBold26(context) {
     return const TextStyle(
       fontSize: 26,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleBold24(context) {
     return const TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w700,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleSemiBold24(context) {
     return const TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleBold20(context) {
     return const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w700,
-      fontFamily: 'Inter',
     );
   }
 
@@ -42,14 +37,12 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleBold18(context) {
     return const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.w700,
-      fontFamily: 'Inter',
     );
   }
 
@@ -57,7 +50,6 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
 
@@ -65,7 +57,6 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Inter',
     );
   }
 
@@ -73,7 +64,6 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w700,
-      fontFamily: 'Inter',
     );
   }
 
@@ -81,28 +71,24 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleMedium16(context) {
     return const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Inter',
     );
   }
  static TextStyle styleRegular16(context) {
     return const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Inter',
     );
   }
   static TextStyle styleMedium14(context) {
     return const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Inter',
       color: Color(0xff7C7C7C),
     );
   }
@@ -110,7 +96,6 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
 
@@ -118,7 +103,6 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.w600,
-      fontFamily: 'Inter',
     );
   }
 

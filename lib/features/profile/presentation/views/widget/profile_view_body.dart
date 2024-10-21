@@ -16,7 +16,7 @@ class ProfileViewBody extends StatelessWidget {
     ProfileListItem(
       icon: 'assets/image/My Details icon.svg',
       title: 'My Details',
-      route: AppRouter.kOrdersView,
+      route: AppRouter.kProfileDetailsView,
     ),
     ProfileListItem(
       icon: 'assets/image/about icon.svg',
@@ -27,12 +27,13 @@ class ProfileViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.only(top: 70, bottom: 30),
       child: Column(
         children: [
           const ProfileHeader(),
           const SizedBox(height: 20),
           ListView.builder(
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               itemCount: 3,
               itemBuilder: (context, index) {

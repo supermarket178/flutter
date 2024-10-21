@@ -36,7 +36,7 @@ class Filterbody extends StatelessWidget {
             },
           ),
           const SizedBox(
-            height: 10,
+            height: 20,
           )
         ],
       ),
